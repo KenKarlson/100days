@@ -6,14 +6,22 @@
     <title>Day 3</title>
     <link rel="stylesheet" href="style.css" />
     <script src="index.js" defer></script>
+    <script src="./access/js/main.js" defer></script>
   </head>
   <body>
     <h1>Load images</h1>
 
     <div class="gallery">
-      <img class="lazy-load imgPrimary" data-src="./access/img/1.png" alt="Image 1" />
+      <img class="lazy-load imgPrimary" data-src="./access/img/2.png" alt="Image 1" />
       <img class="lazy-load imgPrimary" data-src="./access/img/21.png" alt="Image 2" />
-      <img class="lazy-load imgPrimary" data-src="./access/img/31.png" alt="Image 3" />
+      <img class="lazy-load imgPrimary" data-src="./access/img/3.png" alt="Image 3" />
     </div>
+    <h1>Local Storage &</h1>
+    <div>
+      <input type="text" id="url" placeholder="URL">
+      <input type="text" id="title" placeholder="Название">
+      <button id="add">Добавить</button>
+      <ul id="bookmarks"></ul>
+     </div>
   </body>
 </html>
