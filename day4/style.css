@@ -7,7 +7,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   color: #717171;
-  background-image: url(assets/img/bg.jpg);
 }
 span {
   font-weight: bold;
@@ -34,19 +33,40 @@ span {
   font-size: 1.2em;
   margin-top: 20px;
 }
+.timerDisplay-time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 62px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.timerDisplay-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .dark-mode {
   background: #333;
+  background-image: url(assets/img/bg_d.jpg);
   color: #fff;
 }
 
 .light-mode {
   background: #fff;
+  background-image: url(assets/img/bg_l.jpg);
   color: #333;
 }
 .dark-mode h1,
 .dark-mode p {
   color: #aaa;
+}
+.s-dark-mode {
+  color: orangered;
+}
+.s-light-mode {
+  color: gray;
 }
 
 .light-mode h1,

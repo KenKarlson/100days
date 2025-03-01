@@ -7,16 +7,33 @@ const daysSpan = document.getElementById("days");
 const hoursSpan = document.getElementById("hours");
 const minutesSpan = document.getElementById("minutes");
 const secondsSpan = document.getElementById("seconds");
-
+const spanElem = document.getElementsByTagName("span");
 const themeButton = document.getElementById("themeButton");
 
 let timerInterval; // для хранения интервала обновления таймера
 let isRunning = false; // флаг, показывающий работает ли таймер
 
+// function toggleTheme() {
+//   const body = document.body;
+//   const span = document.getElementsByTagName("span");
+//   body.classList.toggle("dark-mode");
+//   body.classList.toggle("light-mode");
+//   console.log(spanElem);
+//   span.classList.toggle("s-dark-mode");
+//   span.classList.toggle("s-light-mode");
+// }
 function toggleTheme() {
   const body = document.body;
+  const spans = document.getElementsByTagName("span"); // получаем коллекцию span
+
   body.classList.toggle("dark-mode");
   body.classList.toggle("light-mode");
+
+  // Проходим по всем span элементам
+  for (let i = 0; i < spans.length; i++) {
+    spans[i].classList.toggle("s-dark-mode");
+    spans[i].classList.toggle("s-light-mode");
+  }
 }
 
 themeButton.addEventListener("click", toggleTheme);
