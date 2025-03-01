@@ -12,13 +12,15 @@
       <div class="container">
         <div class="timer">
           <input type="datetime-local" id="eventDate" />
-          <button id="startTimer">Установить дату зарплаты</button>
+          <button id="startTimer" disabled>Установить дату</button>
+          <button id="stopTimer" disabled>Стоп</button>
+          <button id="resetTimer" disabled>Сброс</button>
 
           <div id="timerDisplay">
-            <p>Дней: <span id="days">0</span></p>
-            <p>Часов: <span id="hours">0</span></p>
-            <p>Минут: <span id="minutes">0</span></p>
-            <p>Секунд: <span id="seconds">0</span></p>
+            <p>Дней: <span id="days">00</span></p>
+            <p>Часов: <span id="hours">00</span></p>
+            <p>Минут: <span id="minutes">00</span></p>
+            <p>Секунд: <span id="seconds">00</span></p>
           </div>
         </div>
       </div>
