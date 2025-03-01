@@ -1,13 +1,28 @@
 //Определение переменных и функций
-let userName = prompt("Как тебя зовут?");
-let userAge = +prompt("Сколько тебе лет?");
+function getUserName() {
+  const userName = prompt("Как тебя зовут?");
+  if (!userName) {
+    alert("Введите корректное имя!");
+    return getUserName();
+  }
+  return userName;
+}
+function getUserAge() {
+  const ageInput = prompt("Сколько тебе лет?");
+  const age = Number(ageInput);
 
-let resue = function (userAge) {
-  let result = "";
-  userAge >= 18
-    ? (result = "Ты совершеннолетний")
-    : (result = "Ты еще несовершеннолетний");
-  return result;
-};
-//Получение результата
-console.log(`Привет, ${userName}! Тебе ${userAge} лет. ${resue(userAge)}`);
+  if (isNaN(age) || age <= 0) {
+    alert("Пожалуйста, введите корректный возраст");
+    return getUserAge(); // Рекурсивный вызов при ошибке
+  }
+  return age;
+}
+//Получение результата Основная функция
+function getUser() {
+  let userName = getUserName();
+  let userAge = getUserAge();
+  let status =
+    userAge >= 18 ? "Ты совершеннолетний" : "Ты еще несовершеннолетний";
+  alert(`Привет ${userName}! ${status}. `);
+}
+getUser();
