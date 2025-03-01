@@ -8,8 +8,18 @@ const hoursSpan = document.getElementById("hours");
 const minutesSpan = document.getElementById("minutes");
 const secondsSpan = document.getElementById("seconds");
 
+const themeButton = document.getElementById("themeButton");
+
 let timerInterval; // для хранения интервала обновления таймера
 let isRunning = false; // флаг, показывающий работает ли таймер
+
+function toggleTheme() {
+  const body = document.body;
+  body.classList.toggle("dark-mode");
+  body.classList.toggle("light-mode");
+}
+
+themeButton.addEventListener("click", toggleTheme);
 
 function stopTimer() {
   if (timerInterval) {

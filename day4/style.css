@@ -9,18 +9,24 @@ body {
   color: #717171;
   background-image: url(assets/img/bg.jpg);
 }
+span {
+  font-weight: bold;
+}
 .main {
   padding-top: 50px;
 }
 .container {
   margin: 0 auto;
-  width: 400px;
+  max-width: 1200px;
 }
 .timer {
+  width: 450px;
+  margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #ccc;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 #timerDisplay {
@@ -29,6 +35,32 @@ body {
   margin-top: 20px;
 }
 
-span {
-  font-weight: bold;
+.dark-mode {
+  background: #333;
+  color: #fff;
+}
+
+.light-mode {
+  background: #fff;
+  color: #333;
+}
+.dark-mode h1,
+.dark-mode p {
+  color: #aaa;
+}
+
+.light-mode h1,
+.light-mode p {
+  color: #666;
+}
+.dark-mode button {
+  background: #444;
+  color: #ccc;
+  border: 1px solid #555;
+}
+
+.light-mode button {
+  background: #f8f8f8;
+  color: #333;
+  border: 1px solid #ccc;
 }
