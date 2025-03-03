@@ -48,7 +48,10 @@ let counter2 = createCounter(-10);
 counter.increment();
 console.log(counter2.getValue()); //Magic
 
-let testCounter = createCounterUniverse(10, 3);
+let testCounter = createCounterUniverse(10, 22);
 testCounter.decrement();
 console.log(testCounter.getValue()); //Magic
+testCounter.reset();
+console.log(testCounter.getValue()); //? 0 !
+
 
