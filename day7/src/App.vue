@@ -12,8 +12,8 @@
         </div>
       </div>
       <div class="form">
-        <input :placeholder="placeholder" />
-        <button type="button">Добавить</button>
+        <input v-model="newTaskTitle" :placeholder="placeholder" />
+        <button type="button" @click="addTask">Добавить</button>
       </div>
     </div>
   </div>
@@ -25,7 +25,8 @@ export default {
   components: {},
   data() {
     return {
-      counter: 3,
+      newTaskTitle: "",
+      currentId: 0,
       title: "Список задач",
       placeholder: "Добавить задачу",
       tasks: [
@@ -37,6 +38,21 @@ export default {
   },
   created() {
     this.counter = this.tasks.filter((task) => task.done === false).length;
+  },
+  methods: {
+    addTask() {
+      if (this.newTaskTitle.trim() !== "") {
+        const newTask = {
+          id: this.tasks.length + 1,
+          name: this.newTaskTitle,
+          done: false,
+        };
+
+        this.tasks.push(newTask);
+        console.log(newTask);
+        this.newTaskTitle = "";
+      }
+    },
   },
 };
 </script>

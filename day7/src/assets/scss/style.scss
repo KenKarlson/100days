@@ -13,6 +13,7 @@ body {
   max-width: 450px;
   border: 1px solid #ccc;
   border-radius: 10px;
+  background-color: bisque;
 }
 .title {
   color: #333;
@@ -20,7 +21,9 @@ body {
 .list {
   padding: 20px;
   border: 1px solid #ccc;
+  border-radius: 6px;
   margin: 20px 0;
+  background-color: beige;
 }
 .item {
   margin: 10px 0;
