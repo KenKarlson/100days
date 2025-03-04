@@ -6,17 +6,9 @@
         Осталось сделать задач: <span class="counter">{{ counter }}</span>
       </div>
       <div class="list">
-        <div class="item done">
-          <input type="checkbox" checked />
-          Развернуть окружение в Codepen
-        </div>
-        <div class="item">
+        <div class="item" v-for="task in tasks" :key="task.id">
           <input type="checkbox" />
-          Пройти курс по Vue
-        </div>
-        <div class="item">
-          <input type="checkbox" />
-          Сделать интернет-магазин на Vue
+          {{ task.name }}
         </div>
       </div>
       <div class="form">
@@ -36,7 +28,15 @@ export default {
       counter: 3,
       title: "Список задач",
       placeholder: "Добавить задачу",
+      tasks: [
+        { id: 1, name: "Развернуть окружение в Codepen", done: true },
+        { id: 2, name: "Пройти курс по Vue", done: false },
+        { id: 3, name: "Прочитать документацию по Vue", done: false },
+      ],
     };
+  },
+  created() {
+    this.counter = this.tasks.filter((task) => task.done === false).length;
   },
 };
 </script>
