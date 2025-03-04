@@ -3,11 +3,16 @@
     <div class="container">
       <h1 class="title">{{ title }}</h1>
       <div>
-        Осталось сделать задач: <span class="counter">{{ counter }}</span>
+        Осталось сделать задач: <span class="counter">{{ count() }}</span>
       </div>
       <div class="list">
-        <div class="item" v-for="task in tasks" :key="task.id">
-          <input type="checkbox" />
+        <div
+          class="item"
+          :class="{ done: task.done }"
+          v-for="task in tasks"
+          :key="task.id"
+        >
+          <input type="checkbox" v-model="task.done" />
           {{ task.name }}
         </div>
       </div>
@@ -26,7 +31,6 @@ export default {
   data() {
     return {
       newTaskTitle: "",
-      currentId: 0,
       title: "Список задач",
       placeholder: "Добавить задачу",
       tasks: [
@@ -35,9 +39,6 @@ export default {
         { id: 3, name: "Прочитать документацию по Vue", done: false },
       ],
     };
-  },
-  created() {
-    this.counter = this.tasks.filter((task) => task.done === false).length;
   },
   methods: {
     addTask() {
@@ -52,6 +53,9 @@ export default {
         console.log(newTask);
         this.newTaskTitle = "";
       }
+    },
+    count() {
+      return this.tasks.filter((task) => task.done === false).length;
     },
   },
 };
