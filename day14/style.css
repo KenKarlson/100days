@@ -1,0 +1,95 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    height: 100vh;
+}
+
+/* Контейнер */
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+/* Заголовок */
+.header {
+    margin-bottom: 20px;
+    padding-top: 20px; /* Добавлен отступ сверху */   
+}
+.header-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+/* Контейнер календаря */
+.calendar-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+
+
+/* Кнопки */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Календарь */
+#calendar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Месяц */
+.month {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.month h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Дни */
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+/* Стиль для текущего дня */
+.current-day {
+    background-color: #007bff; /* Синий цвет */
+    color: white; /* Белый текст */
+    font-weight: bold; /* Жирный шрифт */
+    border: 2px solid #0056b3; /* Темно-синяя рамка */
+}
