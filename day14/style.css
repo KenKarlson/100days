@@ -84,6 +84,14 @@ button:hover {
   border-radius: 5px;
   background-color: white;
 }
+
+
+/* Стиль для выходных дней (суббота и воскресенье) */
+.weekend {
+    background-color: #ffe6cc; /* Светло-оранжевый цвет */
+    color: #333; /* Темный текст */
+}
+
 /* Стиль для текущего дня */
 .current-day {
   background-color: #007bff; /* Синий цвет */

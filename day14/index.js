@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Определяем элементы DOM
   const prevYearBtn = document.getElementById("prevYear");
   const nextYearBtn = document.getElementById("nextYear");
   const currentYearElement = document.getElementById("currentYear");
@@ -47,14 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const dayElement = document.createElement("div");
         dayElement.classList.add("day");
         dayElement.textContent = day;
-
-        // Определяем день недели
-        const dayOfWeek = new Date(year, month, day).getDay();
-
-        // Проверяем, является ли день субботой или воскресеньем
-        if (dayOfWeek === 0 || dayOfWeek === 6) {
-          dayElement.classList.add("weekend");
-        }
 
         // Проверяем, является ли день текущим
         if (
