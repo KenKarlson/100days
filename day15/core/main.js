@@ -1,3 +1,3 @@
-import { mutator } from "./assets/js/brt.js";
-import { add } from "../assets/js/brt.js";
-mutator("test");
+import kaplay from "https://unpkg.com/kaplay@3001/dist/kaplay.mjs";
+// start kaplay :)
+kaplay();
