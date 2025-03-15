@@ -9,7 +9,7 @@ body {
 h1 {
   font-size: 2em;
   font-family: Arial, sans-serif;
-  background: linear-gradient(45deg, #221166, #be419d, #fafbfa);
+  background: linear-gradient(45deg, #221166, #be419d, #fafbfa, #339, #ff3);
   background-size: 200% auto;
   color: transparent;
   -webkit-background-clip: text;
