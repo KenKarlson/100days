@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden; /* Скрыть полосы прокрутки */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 h1 {
   font-size: 2em;
@@ -26,7 +27,9 @@ h1 {
     background-position: 100% 50%;
   }
 }
-
+h3 {
+  font-weight: 400;
+}
 #video-background {
   position: fixed;
   top: 0;
